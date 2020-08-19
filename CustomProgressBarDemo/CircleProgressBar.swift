@@ -25,7 +25,23 @@ enum AsyncImageProgress {
 
 struct CircularProgressIndicator: View {
 
-	let progress: AsyncImageProgress
+	enum Progress {
+		case indeterminate
+		case determinate(received: Int64, total: Int64)
+
+		var relative: Double {
+			let value: Double
+			switch self {
+			case .indeterminate:
+				value = -1
+			case .determinate(received: let rec, total: let total):
+				value = Double(rec) / Double(total)
+			}
+			return value
+		}
+	}
+
+	let progress: Progress
 
 	let size: CGFloat
 	private var lineWidth: CGFloat { size * 0.0666666666 }
@@ -46,7 +62,7 @@ struct CircularProgressIndicator: View {
 
 
 	/// Initializes a new progress indicator with custom parameters
-	init(progress: AsyncImageProgress,
+	init(progress: Progress,
 		 size: CGFloat,
 		 indeterminateText: String = "",
 		 showPercentage: Bool = false,

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProgressBarDemo: View {
 
-	@State private var circleProgress: AsyncImageProgress = .determinate(received: 0, total: 100)
+	@State private var circleProgress: CircularProgressIndicator.Progress = .determinate(received: 0, total: 100)
 	@State private var indeterminateProgress: AsyncImageProgress = .indeterminate
 
 	@State private var color: Color = .pink
@@ -24,6 +24,7 @@ struct ProgressBarDemo: View {
 									  showPercentage: true,
 									  progressColor: color,
 									  textColor: .primary)
+
 
 			Button(action: {
 				startLoading()
