@@ -10,28 +10,20 @@ import SwiftUI
 struct ProgressBarDemo: View {
 
 	@State private var circleProgress: AsyncImageProgress = .determinate(received: 0, total: 100)
+	@State private var indeterminateProgress: AsyncImageProgress = .indeterminate
+
+	@State private var color: Color = .pink
 
     var body: some View {
-		VStack {
-			CircularProgressBar(circleProgress: circleProgress,
-								size: 80,
-								showPercentage: true)
+		VStack(spacing: 12) {
 
-			CircularProgressBar(circleProgress: circleProgress,
-								size: 60,
-								showPercentage: true)
+			CircularProgressIndicator(size: 50, progressColor: .pink)
 
-			CircularProgressBar(circleProgress: circleProgress,
-								size: 40,
-								showPercentage: true)
-
-			CircularProgressBar(circleProgress: circleProgress,
-								size: 20,
-								showPercentage: true)
-
-			CircularProgressBar(circleProgress: circleProgress,
-								size: 100,
-								showPercentage: true)
+			CircularProgressIndicator(progress: circleProgress,
+									  size: 80,
+									  showPercentage: true,
+									  progressColor: color,
+									  textColor: .primary)
 
 			Button(action: {
 				startLoading()
@@ -56,9 +48,10 @@ struct ProgressBarDemo: View {
 					let newValue = rec + 1
 					circleProgress = .determinate(received: newValue, total: total)
 				}
+
 				if circleProgress.relative >= 1.0 {
+					color = .green
 					timer.invalidate()
-//					reset()
 				}
 			}
 		})
@@ -66,6 +59,7 @@ struct ProgressBarDemo: View {
 
 	private func reset() {
 		circleProgress = .determinate(received: 0, total: 100)
+		color = .pink
 	}
 }
 
