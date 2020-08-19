@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		37EE9CD524ED8FB8003CC6DB /* CustomProgressBarDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE9CD424ED8FB8003CC6DB /* CustomProgressBarDemoApp.swift */; };
-		37EE9CD724ED8FB8003CC6DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE9CD624ED8FB8003CC6DB /* ContentView.swift */; };
+		37EE9CD724ED8FB8003CC6DB /* ProgressBarDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE9CD624ED8FB8003CC6DB /* ProgressBarDemo.swift */; };
 		37EE9CD924ED8FBA003CC6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37EE9CD824ED8FBA003CC6DB /* Assets.xcassets */; };
 		37EE9CDC24ED8FBA003CC6DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37EE9CDB24ED8FBA003CC6DB /* Preview Assets.xcassets */; };
+		37EE9CE424ED8FD5003CC6DB /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE9CE324ED8FD5003CC6DB /* CircleProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		37EE9CD124ED8FB8003CC6DB /* CustomProgressBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomProgressBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EE9CD424ED8FB8003CC6DB /* CustomProgressBarDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBarDemoApp.swift; sourceTree = "<group>"; };
-		37EE9CD624ED8FB8003CC6DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		37EE9CD624ED8FB8003CC6DB /* ProgressBarDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarDemo.swift; sourceTree = "<group>"; };
 		37EE9CD824ED8FBA003CC6DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37EE9CDB24ED8FBA003CC6DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37EE9CDD24ED8FBA003CC6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37EE9CE324ED8FD5003CC6DB /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				37EE9CD424ED8FB8003CC6DB /* CustomProgressBarDemoApp.swift */,
-				37EE9CD624ED8FB8003CC6DB /* ContentView.swift */,
+				37EE9CD624ED8FB8003CC6DB /* ProgressBarDemo.swift */,
+				37EE9CE324ED8FD5003CC6DB /* CircleProgressBar.swift */,
 				37EE9CD824ED8FBA003CC6DB /* Assets.xcassets */,
 				37EE9CDD24ED8FBA003CC6DB /* Info.plist */,
 				37EE9CDA24ED8FBA003CC6DB /* Preview Content */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37EE9CD724ED8FB8003CC6DB /* ContentView.swift in Sources */,
+				37EE9CE424ED8FD5003CC6DB /* CircleProgressBar.swift in Sources */,
+				37EE9CD724ED8FB8003CC6DB /* ProgressBarDemo.swift in Sources */,
 				37EE9CD524ED8FB8003CC6DB /* CustomProgressBarDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
