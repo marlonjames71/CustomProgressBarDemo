@@ -7,22 +7,6 @@
 
 import SwiftUI
 
-enum AsyncImageProgress {
-	case indeterminate
-	case determinate(received: Int64, total: Int64)
-
-	var relative: Double {
-		let value: Double
-		switch self {
-		case .indeterminate:
-			value = -1
-		case .determinate(received: let rec, total: let total):
-			value = Double(rec) / Double(total)
-		}
-		return value
-	}
-}
-
 struct CircularProgressIndicator: View {
 
 	enum Progress {
